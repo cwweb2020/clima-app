@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./styles/base.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <BrowserRouter>
+          <div className="title-app">
+            <h4>Clima App</h4>
+            <FaMagnifyingGlass />
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/mas-notas" element={<Nosotros />} /> */}
+          </Routes>
+        </BrowserRouter>
+      </main>
+    </>
   );
-}
+};
 
 export default App;

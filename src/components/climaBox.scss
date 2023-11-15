@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+$fuente-roboto: 'Roboto', sans-serif;
+
+.clima-box-total { 
+    padding: 16px;
+	//border-bottom: 3px solid rgb(219, 219, 219);
+	min-height: 22vh;
+    display: flex;
+    flex-direction: column;
+
+	border-radius: 15px;
+	box-shadow: 8px 8px 15px #cbced1, -8px -8px 15px #ffffff;
+	transition: box-shadow 0.3s ease-in-out;
+    width: 95%;
+    margin: auto;
+	background-color: #f0f0f06b;
+	max-width: 600px;
+
+	&:hover { 
+		box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
+	}
+
+	.clima-wrapper { 
+        display: flex;
+        align-items: center;
+
+		.icon-clima { 
+           margin-left: 22px;
+			img { 
+                width: 70px;
+
+			}
+		}
+
+		.temp-container { 
+              display: flex;
+			.number { 
+                font-size: 40px;
+			}
+
+			.celsius { 
+                font-size: 25px;
+				align-self: center;
+			}
+		}
+		.pronostico {
+			margin-left: auto;
+			margin-right: 15px;
+			h4 {
+              text-transform: capitalize;
+			  font-size: 20px;
+			  font-weight: 500;
+			  font-family: $fuente-roboto;
+			}
+		}
+	}
+}
