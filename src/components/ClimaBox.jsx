@@ -5,6 +5,7 @@ import nocheNublado from "../img/noche-nublado.png";
 import "./climaBox.scss";
 import Parametros from "./Parametros";
 import diaParcialNublado from "../img/parcial-nublado.png";
+import rain from "../img/rain.png";
 
 const ClimaBox = () => {
   const date = new Date();
@@ -20,19 +21,19 @@ const ClimaBox = () => {
           <div className="icon-temperature-container">
             <div className="icon-clima">
               {hour >= 6 && hour < 19 ? (
-                <img src={diaParcialNublado} alt="" />
+                <img src={rain} alt="" />
               ) : (
                 <img src={nocheNublado} alt="" />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">23°</span>
+              <span className="number">26°</span>
               <span className="celsius">C</span>
             </div>
           </div>
           <div className="pronostico">
-            <h4>parcialmente </h4>
-            <h4>nublado </h4>
+            <h4>lluvia</h4>
+            <h4>copiosa </h4>
           </div>
         </div>
         <Parametros />
