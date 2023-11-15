@@ -42,14 +42,9 @@ $fuente-roboto: 'Roboto', sans-serif;
 	
 			.temp-container { 
 				  display: flex;
-<<<<<<< HEAD
 				  margin-top: 4px;
 				.number { 
 					font-size: 2.27em;
-=======
-				.number { 
-					font-size: 2.5em;
->>>>>>> 0b60f79a5bd9c7ac35d4296798258d33bb61adbc
 				}
 	
 				.celsius { 
@@ -63,6 +58,8 @@ $fuente-roboto: 'Roboto', sans-serif;
 		.pronostico {
 			// margin-left: auto;
 			// margin-right: 15px;
+			margin-bottom: 12px;
+			font-size: 12px;
 			h4 {
               text-transform: capitalize;
 			  font-size: 1.25em;
