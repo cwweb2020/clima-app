@@ -10,23 +10,25 @@ const ClimaBox = () => {
   const date = new Date();
   const hour = date.getHours();
 
-  console.log(hour);
+  // console.log(hour);
 
   return (
     <>
       <section className="clima-box-total">
         <span>Hoy</span>
         <div className="clima-wrapper">
-          <div className="icon-clima">
-            {hour >= 6 && hour < 19 ? (
-              <img src={diaParcialNublado} alt="" />
-            ) : (
-              <img src={nocheNublado} alt="" />
-            )}
-          </div>
-          <div className="temp-container">
-            <span className="number">23°</span>
-            <span className="celsius">C</span>
+          <div className="icon-temperature-container">
+            <div className="icon-clima">
+              {hour >= 6 && hour < 19 ? (
+                <img src={diaParcialNublado} alt="" />
+              ) : (
+                <img src={nocheNublado} alt="" />
+              )}
+            </div>
+            <div className="temp-container">
+              <span className="number">23°</span>
+              <span className="celsius">C</span>
+            </div>
           </div>
           <div className="pronostico">
             <h4>parcialmente </h4>
