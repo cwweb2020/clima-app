@@ -1,10 +1,10 @@
 import React from "react";
-import sol from "../img/soleado.png";
-import moon from "../img/moon.png";
-import nocheNublado from "../img/noche-nublado.png";
+import sol from "../img/dia/soleado.png";
+import moon from "../img/noche/moon.png";
+import nocheNublado from "../img/noche/nublado-noche.png";
 import "./climaBox.scss";
 import Parametros from "./Parametros";
-import diaParcialNublado from "../img/parcial-nublado.png";
+import diaParcialNublado from "../img/dia/parcial-nublado.png";
 import rain from "../img/rain.png";
 
 const ClimaBox = () => {
