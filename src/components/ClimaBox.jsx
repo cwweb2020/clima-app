@@ -20,8 +20,8 @@ const ClimaBox = () => {
         <div className="clima-wrapper">
           <div className="icon-temperature-container">
             <div className="icon-clima">
-              {hour >= 6 && hour < 19 ? (
-                <img src={rain} alt="" />
+              {hour >= 6 && hour < 20 ? (
+                <img src={diaParcialNublado} alt="" />
               ) : (
                 <img src={nocheNublado} alt="" />
               )}
@@ -32,8 +32,8 @@ const ClimaBox = () => {
             </div>
           </div>
           <div className="pronostico">
-            <h4>lluvia</h4>
-            <h4>copiosa </h4>
+            <h4>parcialmente</h4>
+            <h4>nublado </h4>
           </div>
         </div>
         <Parametros />
