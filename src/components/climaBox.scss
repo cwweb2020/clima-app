@@ -13,7 +13,7 @@ $fuente-roboto: 'Roboto', sans-serif;
 	border-radius: 15px;
 	box-shadow: 8px 8px 15px #cbced1, -8px -8px 15px #ffffff;
 	transition: box-shadow 0.3s ease-in-out;
-    width: 95%;
+    width: 92%;
     margin: auto;
 	background-color: #f0f0f06b;
 	max-width: 600px;
@@ -55,6 +55,7 @@ $fuente-roboto: 'Roboto', sans-serif;
 					margin-bottom: 15px;
 					color: #db9426;
 					font-weight: 700;
+					display: block;
 				}
 			}
 		}
