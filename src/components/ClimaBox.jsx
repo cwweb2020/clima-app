@@ -6,12 +6,16 @@ import "./climaBox.scss";
 import Parametros from "./Parametros";
 import diaParcialNublado from "../img/dia/parcial-nublado.png";
 import rain from "../img/rain.png";
+import PronosticoExtendido from "./PronosticoExtendido";
+import nocheDespejada from "../img/noche/noche-despejado.png";
 
 const ClimaBox = () => {
   const date = new Date();
   const hour = date.getHours();
 
   // console.log(hour);
+
+  let segundaPalabra = false;
 
   return (
     <>
@@ -23,21 +27,22 @@ const ClimaBox = () => {
               {hour >= 6 && hour < 20 ? (
                 <img src={diaParcialNublado} alt="" />
               ) : (
-                <img src={nocheNublado} alt="" />
+                <img src={nocheDespejada} alt="" />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">26°</span>
+              <span className="number">16°</span>
               <span className="celsius">C</span>
             </div>
           </div>
           <div className="pronostico">
-            <h4>parcialmente</h4>
-            <h4>nublado </h4>
+            <h4>despejado</h4>
+            <h4>{segundaPalabra ? "nublado" : ""} </h4>
           </div>
         </div>
         <Parametros />
       </section>
+      <PronosticoExtendido />
     </>
   );
 };
