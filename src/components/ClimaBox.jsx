@@ -8,6 +8,9 @@ import diaParcialNublado from "../img/dia/parcial-nublado.png";
 import rain from "../img/rain.png";
 import PronosticoExtendido from "./PronosticoExtendido";
 import nocheDespejada from "../img/noche/noche-despejado.png";
+import Atributes from "./Atributes";
+import ProbabilidadLluvia from "./ProbabilidadLluvia";
+import nocheLluvia from "../img/noche/noche-lluvia.png";
 
 const ClimaBox = () => {
   const date = new Date();
@@ -27,21 +30,23 @@ const ClimaBox = () => {
               {hour >= 6 && hour < 20 ? (
                 <img src={diaParcialNublado} alt="" />
               ) : (
-                <img src={nocheDespejada} alt="" />
+                <img src={nocheLluvia} alt="" />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">16°</span>
+              <span className="number">19°</span>
               <span className="celsius">C</span>
             </div>
           </div>
           <div className="pronostico">
-            <h4>despejado</h4>
+            <h4> lluvia</h4>
             <h4>{segundaPalabra ? "nublado" : ""} </h4>
           </div>
         </div>
         <Parametros />
       </section>
+      <ProbabilidadLluvia />
+      <Atributes />
       <PronosticoExtendido />
     </>
   );

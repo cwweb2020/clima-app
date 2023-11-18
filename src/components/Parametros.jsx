@@ -7,15 +7,15 @@ const Parametros = () => {
       <section className="parametro-total">
         <div className="wrapper-parametros">
           <span>
-            <div>Humedad</div>
-            76%
+            <div>Minima</div>
+            16° C
           </span>
           <span>
-            <div>Viento</div> 13 km/h
+            <div>Maxima</div> 27° C
           </span>
           <span>
-            <div>Visibilidad</div>
-            10 km
+            <div>Sens/term</div>
+            20° C
           </span>
         </div>
       </section>
