@@ -10,7 +10,7 @@ const App = () => {
       <main>
         <BrowserRouter>
           <div className="title-app">
-            <h4>Clima App</h4>
+            <h4>SkyView</h4>
             <FaMagnifyingGlass />
           </div>
           <Routes>

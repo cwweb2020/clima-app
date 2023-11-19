@@ -11,6 +11,7 @@ import nocheDespejada from "../img/noche/noche-despejado.png";
 import Atributes from "./Atributes";
 import ProbabilidadLluvia from "./ProbabilidadLluvia";
 import nocheLluvia from "../img/noche/noche-lluvia.png";
+import refresh from "../img/refresh.png";
 
 const ClimaBox = () => {
   const date = new Date();
@@ -20,26 +21,38 @@ const ClimaBox = () => {
 
   let segundaPalabra = false;
 
+  const reloadWindow = () => {
+    window.location.reload();
+  };
+
   return (
     <>
       <section className="clima-box-total">
-        <span>Hoy</span>
+        <div style={topContainer}>
+          <span>Rosario</span>{" "}
+          <img
+            onClick={reloadWindow}
+            style={{ width: "17.5px" }}
+            src={refresh}
+            alt=""
+          />
+        </div>
         <div className="clima-wrapper">
           <div className="icon-temperature-container">
             <div className="icon-clima">
               {hour >= 6 && hour < 20 ? (
                 <img src={diaParcialNublado} alt="" />
               ) : (
-                <img src={nocheLluvia} alt="" />
+                <img src={nocheDespejada} alt="" />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">19°</span>
+              <span className="number">15°</span>
               <span className="celsius">C</span>
             </div>
           </div>
           <div className="pronostico">
-            <h4> lluvia</h4>
+            <h4> despejado</h4>
             <h4>{segundaPalabra ? "nublado" : ""} </h4>
           </div>
         </div>
@@ -52,4 +65,9 @@ const ClimaBox = () => {
   );
 };
 
+const topContainer = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+};
 export default ClimaBox;
