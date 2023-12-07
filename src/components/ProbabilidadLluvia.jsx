@@ -14,7 +14,7 @@ const ProbabilidadLluvia = () => {
               src={rain}
               alt=""
             />
-            <span>20%</span>
+            <span>80%</span>
           </h4>
         </div>
       </section>

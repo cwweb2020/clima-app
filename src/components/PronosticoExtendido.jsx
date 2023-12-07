@@ -11,10 +11,10 @@ const PronosticoExtendido = () => {
             <div>viernes</div> <span>max 30° C</span> <h5>min 17° C</h5>
           </div>
           <div className="box2">
-            <div>sabado</div> <span>max 30° C</span> <h5>min 17° C</h5>
+            <div>sabado</div> <span>max 32° C</span> <h5>min 21° C</h5>
           </div>
           <div className="box3">
-            <div>domingo</div> <span>max 30° C</span> <h5>min 17° C</h5>
+            <div>domingo</div> <span>max 21° C</span> <h5>min 14° C</h5>
           </div>
         </div>
       </section>

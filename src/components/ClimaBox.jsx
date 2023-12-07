@@ -13,6 +13,7 @@ import ProbabilidadLluvia from "./ProbabilidadLluvia";
 import nocheLluvia from "../img/noche/noche-lluvia.png";
 import parcialNubladoNoche from "../img/noche/parcial-nublado-noche.png";
 import refresh from "../img/refresh.png";
+import wind from "../img/wind.png";
 
 const ClimaBox = () => {
   const date = new Date();
@@ -42,18 +43,18 @@ const ClimaBox = () => {
           <div className="icon-temperature-container">
             <div className="icon-clima">
               {hour >= 6 && hour < 20 ? (
-                <img src={sol} alt="" />
+                <img src={wind} alt="" />
               ) : (
                 <img src={parcialNubladoNoche} alt="" />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">24°</span>
+              <span className="number">18°</span>
               <span className="celsius">C</span>
             </div>
           </div>
           <div className="pronostico">
-            <h4> soleado</h4>
+            <h4> ventoso</h4>
             <h4>{segundaPalabra ? "nublado" : ""} </h4>
           </div>
         </div>
