@@ -27,6 +27,9 @@ const Header = () => {
               name="city"
               placeholder="Ingrese ciudad"
             />
+            <button className="input-button" type="submit">
+              Buscar
+            </button>
           </form>
         )}
         <FaMagnifyingGlass onClick={() => setSearch(!search)} />

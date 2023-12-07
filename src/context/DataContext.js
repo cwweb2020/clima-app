@@ -12,6 +12,7 @@ const ShareDataProvider = ({ children }) => {
     const { city } = e.target;
     console.log(city.value);
     setCityPlace(city.value);
+    setSearch(false);
   };
 
   return (

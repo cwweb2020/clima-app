@@ -42,11 +42,25 @@ main {
 .formulary {
   flex: 1;
   margin: 0 15px 0 0;
+  position: relative;
+
   .input-city {
     padding: 8px;
     border: 1px solid lightgray;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 100%;
+  }
+  .input-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background: cadetblue;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 8px 0 10px;
   }
 }
