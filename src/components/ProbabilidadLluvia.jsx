@@ -1,5 +1,4 @@
 import React from "react";
-import "./probabilidad.scss";
 import rain from "../img/rain.png";
 
 const ProbabilidadLluvia = () => {
@@ -10,11 +9,11 @@ const ProbabilidadLluvia = () => {
           <h4>
             * Probabilidad de lluvia:{" "}
             <img
-              style={{ width: "23px", margin: "0 12px" }}
+              style={{ width: "23px", margin: "0 8px 0 12px" }}
               src={rain}
               alt=""
             />
-            <span>80%</span>
+            <span>10%</span>
           </h4>
         </div>
       </section>

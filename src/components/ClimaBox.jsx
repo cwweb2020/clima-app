@@ -1,8 +1,8 @@
-import React from "react";
-import sol from "../img/dia/soleado.png";
+import React, { useContext } from "react";
+import { DataContext } from "../context/DataContext";
+import sol from "../img/dia/sol.png";
 import moon from "../img/noche/moon.png";
 import nocheNublado from "../img/noche/nublado-noche.png";
-import "./climaBox.scss";
 import Parametros from "./Parametros";
 import diaParcialNublado from "../img/dia/parcial-nublado.png";
 import rain from "../img/rain.png";
@@ -12,16 +12,16 @@ import Atributes from "./Atributes";
 import ProbabilidadLluvia from "./ProbabilidadLluvia";
 import nocheLluvia from "../img/noche/noche-lluvia.png";
 import parcialNubladoNoche from "../img/noche/parcial-nublado-noche.png";
-import refresh from "../img/refresh.png";
 import wind from "../img/wind.png";
+import { FiRefreshCw } from "react-icons/fi";
+import Preasure from "./Preasure";
+import CelsiusIcon from "./CelsiusIcon";
 
 const ClimaBox = () => {
   const date = new Date();
   const hour = date.getHours();
-
-  // console.log(hour);
-
-  let segundaPalabra = false;
+  const min = date.getMinutes();
+  const { climeData } = useContext(DataContext);
 
   const reloadWindow = () => {
     window.location.reload();
@@ -31,36 +31,44 @@ const ClimaBox = () => {
     <>
       <section className="clima-box-total">
         <div style={topContainer}>
-          <span>Rosario</span>{" "}
-          <img
-            onClick={reloadWindow}
-            style={{ width: "17.5px" }}
-            src={refresh}
-            alt=""
-          />
+          <span>
+            {climeData.nameCity} - {hour}:{min}hs{" "}
+          </span>{" "}
+          <FiRefreshCw />
         </div>
         <div className="clima-wrapper">
           <div className="icon-temperature-container">
             <div className="icon-clima">
               {hour >= 6 && hour < 20 ? (
-                <img src={wind} alt="" />
+                <img src={sol} alt="" />
               ) : (
-                <img src={parcialNubladoNoche} alt="" />
+                <img
+                  src={
+                    climeData.condition === "Clear"
+                      ? nocheDespejada
+                      : diaParcialNublado
+                  }
+                  alt=""
+                />
               )}
             </div>
             <div className="temp-container">
-              <span className="number">18°</span>
-              <span className="celsius">C</span>
+              <span className="number">{climeData.temp}</span>
+              <span style={{ marginLeft: "4px" }} className="celsius">
+                <CelsiusIcon />{" "}
+              </span>
             </div>
           </div>
           <div className="pronostico">
-            <h4> ventoso</h4>
-            <h4>{segundaPalabra ? "nublado" : ""} </h4>
+            <h4>{climeData.description} </h4>
           </div>
         </div>
         <Parametros />
       </section>
-      <ProbabilidadLluvia />
+      <div className="pressure-rain-container">
+        <ProbabilidadLluvia />
+        <Preasure />
+      </div>
       <Atributes />
       <PronosticoExtendido />
     </>

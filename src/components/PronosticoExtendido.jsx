@@ -1,5 +1,5 @@
 import React from "react";
-import "./extendido.scss";
+// import "./extendido.scss";
 
 const PronosticoExtendido = () => {
   return (
