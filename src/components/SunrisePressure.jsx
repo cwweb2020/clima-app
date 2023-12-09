@@ -9,16 +9,16 @@ const TarjetaPrueba = () => {
     <>
       <h4 style={{ textAlign: "center", marginTop: "20px" }}>Mas info</h4>
       <section className="section-sun-preasure">
-        <div class="neomorphic-container">
+        <div className="neomorphic-container">
           <span>El sol sale:</span>
-          <img class="sun-image" src={sunrise} alt="Imagen del sol" />
-          <div class="time-text">{climeData.sunrise} AM</div>
+          <img className="sun-image" src={sunrise} alt="Imagen del sol" />
+          <div className="time-text">{climeData.sunrise} AM</div>
         </div>
 
-        <div class="neomorphic-container">
+        <div className="neomorphic-container">
           <span>Presion atm:</span>
           <img style={{}} src={pressure} alt="" />
-          <div class="pressure-text">{climeData.pressure} hPa</div>
+          <div className="pressure-text">{climeData.pressure} hPa</div>
         </div>
       </section>
     </>
