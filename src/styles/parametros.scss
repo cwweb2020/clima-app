@@ -1,23 +1,25 @@
-.parametro-total { 
+.parametro-total {
+  display: flex;
+  flex: 1;
+  .wrapper-parametros {
+    //  margin-top: auto;
+    margin-top: 30px;
     display: flex;
+    justify-content: space-around;
     flex: 1;
-	.wrapper-parametros { 
-      //  margin-top: auto;
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-around;
-        flex: 1;
-        ///
-        font-size: 14px;
-		span { 
-           font-size: 1em;
- 
-            div {
-                margin-bottom: 5px;
-                font-weight: 500;
-            }
-		}
-	}
+    ///
+    font-size: 14px;
+    span {
+      font-size: 1em;
+
+      div {
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+    }
+  }
 }
 
-
+.wrapper-parametros > span {
+  font-weight: 700;
+}

@@ -1,20 +1,18 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import Parametros from "./Parametros";
-import PronosticoExtendido from "./PronosticoExtendido";
+// import PronosticoExtendido from "./PronosticoExtendido";
 import Atributes from "./Atributes";
-import ProbabilidadLluvia from "./ProbabilidadLluvia";
+// import ProbabilidadLluvia from "./ProbabilidadLluvia";
 import { FiRefreshCw } from "react-icons/fi";
-import Preasure from "./Preasure";
+// import Preasure from "./Preasure";
 import CelsiusIcon from "./CelsiusIcon";
 
 import { weatherIcons } from "../utils/weatherIcons";
 import SunrisePressure from "./SunrisePressure";
+import gps from "../img/gps.png";
 
 const ClimaBox = () => {
-  const date = new Date();
-  const hour = date.getHours();
-  const min = date.getMinutes();
   const { climeData } = useContext(DataContext);
 
   const iconKey = climeData.icon || "01d";
@@ -28,8 +26,10 @@ const ClimaBox = () => {
     <>
       <section className="clima-box-total">
         <div style={topContainer}>
-          <span>
-            {climeData.nameCity} - {hour}:{min}hs{" "}
+          <span style={span}>
+            {" "}
+            <img style={{ width: "14px" }} src={gps} alt="" />{" "}
+            {climeData.nameCity}
           </span>{" "}
           <FiRefreshCw />
         </div>
@@ -70,5 +70,11 @@ const topContainer = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+};
+
+const span = {
+  fontSize: "14px",
+  fontWeight: "bold",
+  color: "#1f72b8",
 };
 export default ClimaBox;

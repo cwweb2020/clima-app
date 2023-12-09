@@ -10,16 +10,16 @@ const Parametros = () => {
       <section className="parametro-total">
         <div className="wrapper-parametros">
           <span>
-            <div>Mínima</div>
+            <div style={parameters}>Minima</div>
             {climeData.temp_min}{" "}
             <img style={{ width: "17px" }} src={c} alt="" />
           </span>
           <span>
-            <div>Máxima</div> {climeData.temp_max}{" "}
+            <div style={parameters}>Maxima</div> {climeData.temp_max}{" "}
             <img style={{ width: "17px" }} src={c} alt="" />
           </span>
           <span>
-            <div>Sens/term</div>
+            <div style={parameters}>Sens/term</div>
             {climeData.feels_like}{" "}
             <img style={{ width: "17px" }} src={c} alt="" />
           </span>
@@ -27,6 +27,11 @@ const Parametros = () => {
       </section>
     </>
   );
+};
+
+const parameters = {
+  fontWeight: "bold",
+  color: "#1f72b8",
 };
 
 export default Parametros;

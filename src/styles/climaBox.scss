@@ -9,6 +9,7 @@ $fuente-roboto: "Roboto", sans-serif;
   // height: 22vh;
   display: flex;
   flex-direction: column;
+  background: aliceblue;
 
   border-radius: 15px;
   transition: box-shadow 0.3s ease-in-out;
@@ -81,7 +82,7 @@ $fuente-roboto: "Roboto", sans-serif;
   }
   div {
     span {
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
   }
 }
