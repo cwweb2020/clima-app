@@ -48,7 +48,6 @@ const ShareDataProvider = ({ children }) => {
       wind: Number(speed.toFixed(1)),
       visibility: visibility / 1000,
       nameCity: name,
-      icon: a.icon,
       sunrise: sunrise,
     });
   };
