@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./tarjeta.scss";
 import sunrise from "../img/sunrise.png";
 import { DataContext } from "../context/DataContext";
 import pressure from "../img/pressure.png";
