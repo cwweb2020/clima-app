@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import "./atributes.scss";
 import wind from "../img/wind.png";
 import gota from "../img/gota.png";
 import ojo from "../img/ojo.png";

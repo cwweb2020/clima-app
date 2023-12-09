@@ -16,7 +16,7 @@ const Preasure = () => {
                 src={pressure}
                 alt=""
               />{" "}
-              {climeData.pressure} mb
+              {climeData.pressure} hp
             </span>
           </h4>
         </div>
@@ -26,7 +26,7 @@ const Preasure = () => {
 };
 
 const container = {
-  marginTop: "5px",
+  marginTop: "20px",
 };
 
 export default Preasure;

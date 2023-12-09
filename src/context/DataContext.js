@@ -26,7 +26,15 @@ const ShareDataProvider = ({ children }) => {
       visibility,
       wind: { speed },
       name,
+      sys,
     } = await response.json();
+    //////// SUNRISE
+    let fechaHora = new Date(sys.sunrise * 1000);
+    let horas = fechaHora.getHours();
+    let minutos = fechaHora.getMinutes();
+    const sunrise = `${horas}:${minutos}`;
+
+    console.log("horas ", horas, minutos);
 
     setClimeData({
       temp: Number(temp.toFixed(1)),
@@ -42,10 +50,12 @@ const ShareDataProvider = ({ children }) => {
       wind: Number(speed.toFixed(1)),
       visibility: visibility / 1000,
       nameCity: name,
+      icon: a.icon,
+      sunrise: sunrise,
     });
   };
   //
-
+  console.log(climeData.icon);
   useEffect(() => {
     getClimeData();
   }, [cityPlace]);
@@ -54,7 +64,7 @@ const ShareDataProvider = ({ children }) => {
     e.preventDefault();
 
     const { city } = e.target;
-    console.log(city.value);
+    // console.log(city.value);
     setCityPlace(city.value);
     setSearch(false);
   };
